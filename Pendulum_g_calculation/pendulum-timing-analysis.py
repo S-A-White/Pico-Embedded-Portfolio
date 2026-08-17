@@ -33,10 +33,10 @@ if len(break_ts) >= 3:
         period = time.ticks_diff(break_ts[i], break_ts[i-2]) / 1000
         periods.append(period)
 
-        avg_T = sum(periods) / len(periods)
-        print(f"Individual Periods (s): {[round(p,3) for p in periods]}")
-        print(f"Average Period (s): {round(avg_T, 3)}")
-        print(f"Average Periods (T) = {avg_T:.4g} s")
+    avg_T = sum(periods) / len(periods)
+    print(f"Individual Periods (s): {[round(p,3) for p in periods]}")
+    print(f"Average Period (s): {round(avg_T, 3)}")
+    print(f"Average Periods (T) = {avg_T:.4g} s")
 
 else:
     print("Not eenough beam breaks to find a period, try swinging the pendulum again for more oscillations")
